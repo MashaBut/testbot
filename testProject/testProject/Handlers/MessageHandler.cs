@@ -2,11 +2,11 @@
 using Telegram.Bot;
 using Telegram.Bot.Types;
 
-namespace testProject.Commands
+namespace testProject.Handlers
 {
-    public class SendMessage
+    public class MessageHandler
     {
-        public async Task HandleAsync(ITelegramBotClient client, ChatId id,string text)
+        public async Task HandleAsync(ITelegramBotClient client, ChatId id, string text)
         {
             await client.SendTextMessageAsync(id, text);
         }

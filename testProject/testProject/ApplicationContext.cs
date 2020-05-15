@@ -1,14 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using testProject.Models;
+using testProject.Data.Entities;
 
-namespace testProject.DataAccess
+namespace testProject
 {
     public class ApplicationContext: DbContext
     {
         public DbSet<Message> Messages { get; set; }
+        public DbSet<TGUser> TGUsers { get; set; }
 
         public ApplicationContext(DbContextOptions<ApplicationContext> options): base(options)
         {
+            Database.EnsureCreated();
         }
     }
 }

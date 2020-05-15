@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace testProject.Models
+namespace testProject.Data.Entities
 {
     public class Message
     {
